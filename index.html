@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute page</title>
+    <link rel="stylesheet" href='./style.css' >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body { margin: 0; overflow: hidden; }
+        canvas { display: block; }      
+    </style>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="heading">
+      <h1>Missile Man's Vision</h1> 
+      </div>
+      <div id="progress-container">       
+      <div id="progress">Are You Ready For Time Travel?....</div></div> 
+        <div class="dropdown">
+            <button class="dropbtn">Select a year</button>
+            <div class="dropdown-content" id="year">
+                <a href="#" data-year="1931">1931</a>
+                <a href="#" data-year="1954">1954</a>
+                <div class="dropdown-group">
+                    <span class="sub-dropbtn">1960s</span>
+                    <div class="sub-dropdown-content">
+                        <a href="#" data-year="1960">1960</a>
+                        <a href="#" data-year="1969">1969</a>
+                    </div>
+                </div>
+                <div class="dropdown-group">
+                    <span class="sub-dropbtn">1980s</span>
+                    <div class="sub-dropdown-content">
+                        <div class="dropdown-group">
+                            <span class="sub-dropbtn">1980</span>
+                            <div class="sub-dropdown-content">
+                                <a href="#" data-year="1980-January">1980-January</a>
+                                <a href="#" data-year="1980-July">1980-July</a></div></div>
+                        <a href="#" data-year="1981">1981</a>
+                        <a href="#" data-year="1990">1990</a>
+                    </div>
+                </div>
+                <div class="dropdown-group">
+                    <span class="sub-dropbtn">1990s</span>
+                    <div class="sub-dropdown-content">
+                        <a href="#" data-year="1992-1999">1992-1999</a>
+                        <a href="#" data-year="1997">1997</a>
+                        <a href="#" data-year="1998">1998</a>
+                    </div>
+                </div>
+                <div class="dropdown-group">
+                    <span class="sub-dropbtn">2000s</span>
+                    <div class="sub-dropdown-content">
+                        <a href="#" data-year="1999-2001">1999-2001</a>
+                        <a href="#" data-year="2002-2007">2002-2007</a>
+                    </div>
+                </div>
+                <div class="dropdown-group">
+                    <span class="sub-dropbtn">2010s</span>
+                    <div class="sub-dropdown-content">
+                        <a href="#" data-year="2014">2014</a>
+                        <a href="#" data-year="2015">2015</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div id="clocks-container"></div>
+    <div class="flip-card-container">
+      <div id="flip-card-1931" class="flip-card" style="display: none;" >
+          <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src='./assets/speech.jpg' alt="speech" class="card-image"></div>
+              <div class="flip-card-back">
+                <h1>1931</h1>
+                <p>Born Avul Pakir Jainulabdeen Abdul Kalam on October 15, in Rameswaram, Tamil Nadu.</p>
+      </div></div></div>
+      <div id="flip-card-1954" class="flip-card" style="display: none;" >
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src='./assets/college.jpg' alt="college" class="card-image">
+            </div><div class="flip-card-back">
+                <h1>1954</h1>
+                <p>Graduates in Physics from Saint Joseph's College, Tiruchirappalli, in 1954.</p>
+      </div> </div></div>
+      <div id="flip-card-1960" class="flip-card" style="display: none;" >
+        <div class="flip-card-inner">
+           <div class="flip-card-front">
+            <img src='./assets/airforce.jpg' alt="airforce" class="card-image" ></div>
+           <div class="flip-card-back">
+            <h1>1960</h1>
+            <p>Gains degree in Aeronautical Engineering from Madras Institute of Technology.</p>
+      </div></div></div>
+      <div id="flip-card-1969" class="flip-card" style="display: none;" >
+        <div class="flip-card-inner">
+           <div class="flip-card-front">
+            <img src='./assets/missile.jpg' alt="missile" class="card-image"></div>
+           <div class="flip-card-back">
+            <h1>1969</h1>
+                <p>Transferred to ISRO from the DRDO.</p>
+      </div></div></div>
+      <div id="flip-card-1980-January" class="flip-card" style="display: none;" >
+        <div class="flip-card-inner">
+           <div class="flip-card-front">
+            <img src='./assets/padma-bhusan.jpeg' alt="padma-bhusan" class="card-image"></div>
+           <div class="flip-card-back">
+            <h1>1980-January</h1>
+            <p>Awarded the Padma Bhushan by the Government of India.</p>
+      </div></div></div>
+      <div id="flip-card-1980-July" class="flip-card" style="display: none;" >
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src='./assets/slv3.png' alt="slv3" class="card-image"></div>
+            <div class="flip-card-back">
+                <h1>1980-July</h1>
+                <p>India launches Rohini satellite with SLV-III under Dr.Kalam's stewardship.</p>
+      </div></div></div>
+      <div id="flip-card-1981" class="flip-card" style="display: none;" >
+        <div class="flip-card-inner">
+           <div class="flip-card-front">
+             <img src='./assets/agni.jpeg' alt="AGNI" class="card-image"></div>
+           <div class="flip-card-back">
+            <h1>1981</h1>
+            <p>Kalam led AGNI and PRITHVI missile programs.</p>
+      </div></div></div>
+      <div id="flip-card-1990" class="flip-card" style="display: none;" >
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src='./assets/padma-vibhusan.jpeg' alt="padma-vibhusan" class="card-image"></div>
+            <div class="flip-card-back">
+                <h1>1990</h1>
+                <p>Awarded the Padma Vibhushan by the Government of India.</p>
+      </div></div></div>
+      <div id="flip-card-1992-1999" class="flip-card" style="display: none;" >
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+               <img src='./assets/advisor.png' alt="slv3" class="card-image"></div>
+            <div class="flip-card-back">
+                <h1>1992-1999</h1>
+                <p>Kalam served as PM's Science Adviser, DRDO Secretary.</p>
+      </div></div></div>
+      <div id="flip-card-1997" class="flip-card" style="display: none;" >
+         <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src='./assets/bharatratna.jpeg' alt="bharatratna" class="card-image"></div>
+            <div class="flip-card-back">
+              <h1>1997</h1>
+              <p>Received the Bharat Ratna, India’s highest civilian honor.</p>
+      </div></div></div>
+      <div id="flip-card-1998" class="flip-card" style="display: none;" >
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src='./assets/pokhran.png' alt="pokhran" class="card-image"></div>
+            <div class="flip-card-back">
+                <h1>1998</h1>
+                <p>Dr. Kalam oversees India's Pokhran II nuclear tests in May.</p>
+      </div></div></div>
+      <div id="flip-card-1999-2001" class="flip-card" style="display: none;" >
+        <div class="flip-card-inner">
+           <div class="flip-card-front">
+               <img src='./assets/scientist.png' alt="scientist" class="card-image"></div>
+           <div class="flip-card-back">
+               <h1>1999-2001</h1>
+               <p>Principal Scientific Advisor to the Government of India.</p>
+      </div></div></div>
+      <div id="flip-card-2002-2007" class="flip-card" style="display: none;" >
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+               <img src='./assets/president.jpg' alt="president" class="card-image"></div>
+           <div class="flip-card-back">
+                <h1>2002-2007</h1>
+                <p>Served as the 11th President of India</p>
+      </div></div></div>
+      <div id="flip-card-2014" class="flip-card" style="display: none;" >
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src='./assets/honorary.jpg' alt="honorary" class="card-image"></div>
+            <div class="flip-card-back">
+              <h1>2014</h1>
+              <p>Received the Doctor of Science (Honoris Causa) by Edinburgh University, UK.</p>
+      </div></div></div>
+      <div id="flip-card-2015" class="flip-card" style="display: none;" >
+         <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src='./assets/last.png' alt="last" class="card-image" ></div>
+            <div class="flip-card-back"> 
+              <h1>2015</h1>
+              <p>He passed away on July 27, 2015 after collapsing during 
+                a lecture at the Indian Institute of Management in Shillong.</p>
+      </div></div></div>
+    </div>
+    <div class="enable-audio">
+        <p>For an enhanced experience, </p>
+        <p>please enable sound.</p> 
+    </div>
+    <button id="toggleButton" class="icon-button">
+    <i id="toggleIcon" class="fas fa-play"></i></button>
+    <audio id="backgroundAudio"  loop >
+    <source src="./assets/kalam.mp3" type="audio/mp3">
+    </audio>
+	<script type="module" src="./script.js"></script>
+    <script src="./clock.js" ></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var icon = document.getElementById('toggleIcon');
+            var audio = document.getElementById('backgroundAudio');
+            // Set initial state: audio paused and show play icon
+            audio.pause();
+            icon.classList.add('fa-play');
+            icon.classList.remove('fa-pause');
+            // Toggle play/pause on button click
+            document.getElementById('toggleButton').addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play().then(() => {
+                        icon.classList.remove('fa-play');
+                        icon.classList.add('fa-pause');
+                    }).catch((error) => {
+                        console.log("Audio playback failed:", error);
+                    });
+                } else {
+                    audio.pause();
+                    icon.classList.remove('fa-pause');
+                    icon.classList.add('fa-play');
+                }
+            });
+            // Attempt to autoplay after a user interaction
+            document.body.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play().catch((error) => {
+                        console.log("Audio autoplay failed:", error);
+                    });
+                }
+            }, { once: true });
+            var audioMessage = document.querySelector('.enable-audio');
+            setTimeout(function() {
+                audioMessage.style.animation = 'fadeOut 1s forwards';
+            }, 10000); 
+        });
+    </script>  
+    </body> 
+</html>  

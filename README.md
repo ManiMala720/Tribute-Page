@@ -48,7 +48,7 @@ This project aims not only to honor Dr. A.P.J. Abdul Kalam but also to celebrate
 
 ## Installation
  Clone the repository:
-   git clone https://github.com/ManiMala720/Tribute-Page-Missile-Man-s-Vision.git
+   git clone https://github.com/ManiMala720/Tribute-Page.git
 
 ## 3D Model Attribution
 The Time Machine 3D model used in this project is created by vertexmonster and was obtained from [Sketchfab](https://sketchfab.com/3d-models/time-machine-a11c6d625e3f46dca26d6e4c4edf2a79).

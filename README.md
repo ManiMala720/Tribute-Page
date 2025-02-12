@@ -2,7 +2,7 @@
 "Missile Man's Vision" is a tribute project dedicated to Dr. A.P.J. Abdul Kalam, built with HTML, CSS, JavaScript, and Three.js to create an interactive and visually engaging experience.
 
 ## Live Demo
-👉 [View the Website](https://ManiMala720.github.io/Tribute-Page/)
+👉 [View the Website](https://dancing-gelato-a36020.netlify.app/)
 
 ## Table of Contents
 - [Project Title and Description](#project-title-and-description)

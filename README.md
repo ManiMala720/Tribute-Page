@@ -14,7 +14,7 @@
 
 ## Project Title and Description
 Project Title:
-Missile Man's Vision: A Tribute to Dr. A.P.J. Abdul Kalam
+Missile Man's Vision - A Tribute to Dr. A.P.J. Abdul Kalam
 
 Description:
 Missile Man's Vision is a web-based tribute dedicated to the exemplary life and visionary contributions of Dr. A.P.J. Abdul Kalam. This project utilizes HTML, CSS, JavaScript, and Three.js to create an immersive and interactive experience that reflects Dr. Kalam's enduring legacy and his profound impact on science, education, and national development.
